@@ -13,7 +13,7 @@ export default function NavBar() {
     const location = useLocation();
     const { pathname } = location;
     return (
-        <div className={`flex py-8  pl-[5em] justify-stretch items-center 2xl:justify-end text-white bg-[0, 0%, 2%]] `}>
+        <div className={`flex py-8  z-10  pl-[5em] sticky top-0 justify-stretch items-center 2xl:justify-end text-white bg-[#050505]`}>
             <div className={` w-[95%] grid grid-cols-1 md:grid-cols-10 2xl:grid-cols-10  items-center`}>
                 <div className={`flex md:col-span-1 justify-start 2xl:col-span-1 text-3xl  py-4`}>
                     Cisco <span className={`flex justify-center items-center font-bold text-3xl  `}>U.</span>
@@ -22,7 +22,7 @@ export default function NavBar() {
                     <ul className='flex flex-wrap  justify-start 2xl:justify-start items-center space-x-4 md:space-x-8 px-3 gap-2'>
                         {NavLinks.map((item) => {
                             return (
-                                <li key={item.id} className={`${item.href === pathname ? 'border-b-2 border-white' : ''} `} >
+                                <li key={item.id} className={`${item.href === pathname ? 'border-b-2 border-white' : 'border-b-2 border-black'} `} >
                                     <Link to={item.href} className={`  2xl:text-2xl `}>{item.name}</Link>
                                 </li>
                             );
