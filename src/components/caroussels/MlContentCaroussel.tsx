@@ -7,17 +7,22 @@ import {
   CarouselContent,
 } from "@/components/ui/carousel";
 
-import { lazy } from "react";
+import React ,{ lazy } from "react";
 
 
-export default function CarouselSpacing() {
+export default function CarouselSpacingML() {
+
 
   const LearningPathCard = lazy(() => 
-  import('./LearningPathCard'));
+  import('../cards/LearningPathCard'));
+
 
   return (
-    <Carousel className="w-full max-h-[40vh]">
-      <CarouselContent className="-ml-1 w-full gap-6">
+    <Carousel opts={{
+        align: "start",
+        loop: true,
+      }} className="w-full max-h-[40vh] ">
+      <CarouselContent className="-ml-1 w-full gap-6 p-3 mr-4">
         {Array.from({ length: 8 }).map((_, index) =>
           <Suspense key={index} fallback={<SkeletonCard />}>
             <LearningPathCard />
