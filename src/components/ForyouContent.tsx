@@ -6,10 +6,12 @@ import Welcome from './extra/WelcomeSect'
 export default function ForyouContent() {
   return (
     <div className='flex flex-col gap-16'>
-        <div><Welcome/> </div>
-        <div><BookmarksToggles/></div>
-        <div><CarouselSpacingML/></div>
-        <div><TutorialCaroussel/></div>
+      <div>
+        <div><Welcome /> </div>
+        <div><BookmarksToggles /></div>
+      </div>
+      <div><CarouselSpacingML /></div>
+      <div><TutorialCaroussel /></div>
     </div>
   )
 }
