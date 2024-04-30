@@ -1,14 +1,16 @@
-import React from 'react'
+
+import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 export default function ContentList() {
-    const [SelectedContent, setSelectedContent] = React.useState(1);
+    const Location = useLocation();
+    const { pathname } = Location;
   return (
     <div>
-        <ul className='flex flex-row relative  gap-8 2xl:gap-14 2xl:justify-start  w-full px-4 py-12 text-black dark:text-white justify-center items-center'>
+        <ul className='flex flex-row relative  gap-8 2xl:gap-14 2xl:justify-start 2xl:left-[12em]  w-full px-4 py-12 text-black dark:text-white justify-center items-center'>
         {ContentLinks.map((item) => {
             return (
                 <li key={item.id}>
-                    <Link to={item.href} className='text-2xl font-light'>{item.name}</Link>
+                    <Link to={item.href} className={`text-2xl font-light ${pathname === item.href ? 'border-b-2 border-black' : 'border-b-2 border-white'}`}>{item.name}</Link>
                 </li>
             );
         })}
