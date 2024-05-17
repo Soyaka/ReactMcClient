@@ -35,14 +35,6 @@ const ContentLinks = [
         name: 'Courses',
         href: '/explore/courses'
     },{
-        id: 4,
-        name: 'Practice Exams',
-        href: '/explore/practice-exams'
-    },{
-        id: 5,
-        name: 'Instructor-led',
-        href: '/explore/instructor-led'
-    },{
         id: 6,
         name: 'Tutorials',
         href: '/explore/tutorials'
@@ -54,9 +46,5 @@ const ContentLinks = [
         id: 8,
         name: 'Podcasts',
         href: '/explore/podcasts'
-    },{
-        id: 9,
-        name: 'Events',
-        href: '/explore/events'
     }
 ]
