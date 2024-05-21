@@ -7,11 +7,9 @@ export default function Instrum() {
             <Insum />
             <Insum />
             </div>
-            
-            <span >
-
-                micro
-            </span>
+            <strong className=' tracking-widest  ' >
+                MICRO
+            </strong>
         </div>
         
     )

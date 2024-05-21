@@ -3,6 +3,7 @@ import Instrum from "../extra/instrum";
 import { Duration, Level } from "@/components/extra/smallComps";
 
 type PathCardProps = {
+  id?: string;
   title: string;
   description: string;
   author: string;
@@ -27,16 +28,15 @@ export default function LearningPathCard({
   isBookmarked,
   skillLevel,
 }: PathCardProps) {
-  isFree = false; 
   return (
-    <div className="path-card w-full h-full rounded-lg min-w-[25rem] text-zinc-600 m-1 bg-gray-100 hover:bg-gray-200 cursor-pointer overflow-hidden">
-      <div className="flex flex-col p-2">
-        <div className="path-card-content">
-          <div className=" path-card-header flex justify-between max-h-[27%]">
+    <div className="path-card w-full h-full rounded-lg min-w-[25rem] max-w-[25rem] min-h-[16rem] max-h-[16rem] text-zinc-600 m-1 bg-gray-100 hover:bg-gray-200 cursor-pointer overflow-hidden flex flex-col">
+      <div className="flex flex-col flex-grow p-2">
+        <div className="path-card-content flex flex-col flex-grow">
+          <div className="path-card-header flex justify-between h-[27%]">
             <div className="path-card-header-left flex flex-col gap-4">
               <div className="path-card-category flex flex-row text-black text-xs leading-tight tracking-[0.2em] relative">
                 {!isFree && (
-                  <span className="traingle-clip absolute -top-[0.5em] -left-[0.5em] bg-[#fbab2c]/90 font-serif  pl-2 pr-6 pt-1 pb-3 text-lg text-left text-black/80">
+                  <span className="triangle-clip absolute -top-[0.5em] -left-[0.5em] bg-[#fbab2c]/90 font-serif pl-2 pr-6 pt-1 pb-3 text-lg text-left text-black/80">
                     $
                   </span>
                 )}
@@ -44,7 +44,7 @@ export default function LearningPathCard({
               </div>
               <div className="path-card-author-image flex items-end">
                 <Instrum />
-                </div>
+              </div>
             </div>
             <div className="path-card-header-right">
               <div className="path-card-bookmark">
@@ -52,16 +52,16 @@ export default function LearningPathCard({
               </div>
             </div>
           </div>
-          <div className="path-card-body flex flex-col gap-3 pb-3">
+          <div className="path-card-body flex flex-col min-h-[33%] gap-3 pb-3">
             <div className="path-card-title w-full p-1 text-sm text-black tracking-tighter">
               {title || "Flask and SQLite: Consuming API Endpoints with Swagger"}
             </div>
-            <p className="path-card-description w-full text-xs multiline-truncate">
+            <p className="path-card-description w-full text-xs multiline-truncate overflow-clip">
               {description ||
                 "Configuration drift, the gradual deviation of a device configuration from its intended state, can lead to network issues and security vulnerabilities. This path will walk you through how to build a configuration manager leveraging Cisco DNA Center's SDK to capture regular snapshots of device configurations and comparing them to a baseline."}
             </p>
           </div>
-          <div className="path-card-footer flex flex-col">
+          <div className="path-card-footer flex flex-col h-[33%] mt-auto">
             <div className="flex flex-row items-end justify-between">
               <div className="path-card-statistics flex flex-row items-center gap-1 px-2">
                 <div className="path-card-duration flex flex-col items-center gap-2">
@@ -83,23 +83,19 @@ export default function LearningPathCard({
                     Subscribe Now
                   </button>
                 </div>
-              ) : (
-                <div className="path-card-free bg-[#fbab2c]/90 px-2 rounded-sm">
-                  <span className="path-card-free-text text-[0.8em] font-semibold text-black/60">
-                    $ Free
-                  </span>
-                </div>
-              )}
+              ) : null}
             </div>
           </div>
         </div>
       </div>
       {progress > 0 && (
-        <div className="w-full rounded-full bg-gray-300">
-          <div
-            className="bg-[#8FB339] p-1 rounded-full"
-            style={{ width: `${progress}%` }}
-          ></div>
+        <div className="w-full mt-auto">
+          <div className="relative bottom-0 left-0 right-0 w-full rounded-full bg-gray-300">
+            <div
+              className="bg-[#8FB339] p-1 rounded-full"
+              style={{ width: `${progress}%` }}
+            ></div>
+          </div>
         </div>
       )}
     </div>

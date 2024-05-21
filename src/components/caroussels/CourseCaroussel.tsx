@@ -10,9 +10,9 @@ type props = {
 
 
 
-const CourseCaroussel = lazy(() => import('@/components/cards/CourseCard'));
+const CourseCard = lazy(() => import('@/components/cards/CourseCard'));
 
-const TutorialCaroussel: React.FC = ( props : any) => {
+const CourseCaroussel: React.FC = ( props : any) => {
 
   const {data} = props
 
@@ -27,22 +27,14 @@ const TutorialCaroussel: React.FC = ( props : any) => {
         <CarouselContent className="-ml-1 w-full gap-4 p-3 mr-4">
           {Array.from({ length: 8 })?.map((item: any, index: number) =>
             <Suspense key={index} fallback={<SkeletonCard />}>
-              <CourseCaroussel {...item}/>
+            <CourseCard {...item}/>
             </Suspense>
           )}
         </CarouselContent>
-
-        {/* <CarouselContent className="-ml-1 w-full gap-6"> //TODO: make this dynamic
-          {data?.map((item: any, index: number) =>
-            <Suspense key={index} fallback={<SkeletonCard />}>
-              <TutorialCard {...item}/>
-            </Suspense>
-          )}
-        </CarouselContent> */}
 
       </Carousel>
     </>
   );
 };
 
-export default TutorialCaroussel;
+export default CourseCaroussel;

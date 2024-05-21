@@ -37,7 +37,7 @@ export default function CourseCard({
             <div className="path-card-header-left flex flex-col gap-8">
               <div className="path-card-category flex flex-row text-black text-xs leading-tight tracking-[0.2em] relative">
                 {!isFree && (
-                  <span className="traingle-clip absolute -top-[0.5em] -left-[0.5em] bg-[#fbab2c]/90 font-serif  pl-2 pr-6 pt-1 pb-3 text-lg text-left text-black/80">
+                  <span className="triangle-clip absolute -top-[0.5em] -left-[0.5em] bg-[#fbab2c]/90 font-serif  pl-2 pr-6 pt-1 pb-3 text-lg text-left text-black/80">
                     $
                   </span>
                 )}

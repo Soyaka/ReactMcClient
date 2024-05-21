@@ -121,7 +121,7 @@
   overflow: hidden;
 }
 
-.traingle-clip{
+.triangle-clip{
   clip-path: polygon(0 0, 0 100%, 100% 0);
 
 
