@@ -22,7 +22,7 @@ const TutorialCaroussel: React.FC = ( props : any) => {
       <Carousel opts={{
           align: "start",
           loop: true,
-        }} className="w-full flex flex-col  max-h-[40vh]">
+        }} className="w-full flex flex-col ">
 
         <CarouselContent className="-ml-1 w-full gap-4 p-3 mr-4">
           {Array.from({ length: 8 })?.map((item: any, index: number) =>
