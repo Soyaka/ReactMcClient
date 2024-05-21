@@ -21,7 +21,9 @@
     "react-router-dom": "^6.23.0",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
-    "vite-plugin-svgr": "^4.2.0"
+    "vite-plugin-svgr": "^4.2.0",
+    "@elastic/react-search-ui": "^1.15.0",
+    "@elastic/search-ui-app-search-connector": "^1.15.0"
   },
   "devDependencies": {
     "@types/node": "^20.12.7",

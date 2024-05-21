@@ -112,3 +112,11 @@
 ::-webkit-scrollbar-corner {
   background-color: #ccc;
 }
+
+
+.multiline-truncate {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3; /* Number of lines to display before truncating */
+  overflow: hidden;
+}

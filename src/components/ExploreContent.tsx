@@ -1,8 +1,9 @@
-import ContentList from "./extra/ContentList"
+import ExploreSearch from "./layouts/explore-search"
 export default function ExploreContent() {
   return (
     <div>
-        <ContentList />
+        {/* <ContentList /> */}
+        <ExploreSearch />
     </div>
   )
 }
