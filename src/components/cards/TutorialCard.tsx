@@ -36,7 +36,7 @@ export default function TutorialCard({
               <div className=" tutorial-card-category text-black text-xs leading-tight tracking-[0.2em]">
                 {category || 'TUTORIAL'}
               </div>
-              <div className=" tutorial-card-author flex items-center text-xs text-black">
+              <div className=" tutorial-card-author flex items-center text-xs gap-3 text-black">
                 <div className=" tutorial-card-author-image flex items-end">
                   <span className=" py-[1.6em] px-[1.33em] min-w-3 bg-blue-800 rounded-b-full"></span>
                   <span className="max-h-1 p-1 rounded-full bg-blue-800"></span>
