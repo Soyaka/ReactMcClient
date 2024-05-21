@@ -2,13 +2,10 @@ import Bookmark from "@/components/extra/bookmark";
 import Instrum from "../extra/instrum";
 import { Duration, Level } from "@/components/extra/smallComps";
 
-type PathCardProps = {
+type CourseProps = {
   title: string;
-  description: string;
-  author: string;
   category: string;
   duration: string;
-  date: string;
   progress: number;
   isFree: boolean;
   isBookmarked: boolean;
@@ -17,23 +14,19 @@ type PathCardProps = {
 
 export default function CourseCard({
   title,
-  description,
-  author,
   category,
   duration,
-  date,
   progress,
   isFree,
   isBookmarked,
   skillLevel,
-}: PathCardProps) {
-  isFree = false; 
-  progress= 40
+}: CourseProps) {
+
   return (
-    <div className="path-card w-full h-full rounded-lg min-w-[12rem] text-zinc-600 m-1 bg-gray-100 hover:bg-gray-200 cursor-pointer overflow-hidden">
+    <div className="path-card w-full h-full rounded-lg min-w-[12rem] min-h-[16rem] max-h-[16rem] text-zinc-600 m-1 bg-gray-100 hover:bg-gray-200 cursor-pointer overflow-hidden">
       <div className="flex flex-col p-2 ">
         <div className="path-card-content flex flex-col gap-3">
-          <div className=" path-card-header flex justify-between max-h-[27%]">
+          <div className=" path-card-header flex justify-between h-[27%] min-h-[27%] max-h-[27%]">
             <div className="path-card-header-left flex flex-col gap-8">
               <div className="path-card-category flex flex-row text-black text-xs leading-tight tracking-[0.2em] relative">
                 {!isFree && (
@@ -41,11 +34,11 @@ export default function CourseCard({
                     $
                   </span>
                 )}
-                <span className={`${!isFree && "ml-5"}`}>{category || "COURSE"}</span>
+                <span className={`${!isFree && "ml-5"}`}>{"COURSE"}</span>
               </div>
               <div className="path-card-author-image flex items-end">
                 <Instrum />
-                </div>
+              </div>
             </div>
             <div className="path-card-header-right">
               <div className="path-card-bookmark">
@@ -53,16 +46,12 @@ export default function CourseCard({
               </div>
             </div>
           </div>
-          <div className="path-card-body flex flex-col gap-3 pb-3">
+          <div className="path-card-body flex flex-col gap-3 h-[33%] min-h-[33%]  max-h-[33%] pb-3 overflow-hidden">
             <div className="path-card-title w-full p-1  text-black tracking-tighter">
               {title || "Flask and SQLite"}
             </div>
-            {/* <p className="path-card-description w-full text-xs multiline-truncate">
-              {description ||
-                "Configuration drift, the gradual deviation of a device configuration from its intended state, can lead to network issues and security vulnerabilities. This path will walk you through how to build a configuration manager leveraging Cisco DNA Center's SDK to capture regular snapshots of device configurations and comparing them to a baseline."}
-            </p> */}
           </div>
-          <div className="path-card-footer flex flex-col p-2">
+          <div className="path-card-footer flex flex-col h-[33%] min-h-[33  max-h-[33%] p-2">
             <div className="flex flex-row items-end justify-between">
               <div className="path-card-statistics flex flex-row items-center gap-1 px-2">
                 <div className="path-card-duration flex flex-col items-center gap-2">
@@ -78,19 +67,6 @@ export default function CourseCard({
                   </span>
                 </div>
               </div>
-              {/* {!isFree ? (
-                <div className="path-card-price bg-sky-600 px-3 py-1 rounded-full text-white">
-                  <button className="path-card-price-text text-[0.8em]">
-                    Subscribe Now
-                  </button>
-                </div>
-              ) : (
-                <div className="path-card-free bg-[#fbab2c]/90 px-2 rounded-sm">
-                  <span className="path-card-free-text text-[0.8em] font-semibold text-black/60">
-                    $ Free
-                  </span>
-                </div>
-              )} */}
             </div>
           </div>
         </div>
