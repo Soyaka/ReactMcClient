@@ -1,4 +1,5 @@
 import React from 'react'
+import CourseCaroussel from './caroussels/CourseCaroussel'
 import CarouselSpacingML from './caroussels/MlContentCaroussel'
 import BookmarksToggles from './extra/BookmarksBtns'
 import TutorialCaroussel from './caroussels/TutorialCaroussel'
@@ -7,11 +8,12 @@ export default function ForyouContent() {
   return (
     <div className='flex flex-col gap-16'>
       <div>
-        <div><Welcome /> </div>
-        <div><BookmarksToggles /></div>
+        <Welcome /> 
+        <BookmarksToggles />
       </div>
-      <div><CarouselSpacingML /></div>
-      <div><TutorialCaroussel /></div>
+      <CarouselSpacingML />
+      <TutorialCaroussel />
+      <CourseCaroussel />
     </div>
   )
 }

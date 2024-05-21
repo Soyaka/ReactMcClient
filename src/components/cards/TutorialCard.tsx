@@ -1,7 +1,8 @@
-import Bookmark from "@/components/extra/bookamrk";
+import Bookmark from "@/components/extra/bookmark";
 import { Duration } from "@/components/extra/smallComps";
 import { Level } from "@/components/extra/smallComps";
 type TutorialCardProps = {
+  id ?: string;
   title: string;
   description: string;
   author: string;
@@ -15,6 +16,7 @@ type TutorialCardProps = {
 };
 
 export default function TutorialCard({
+  id,
   title,
   description,
   author,
@@ -85,15 +87,15 @@ export default function TutorialCard({
           </div>
         </div>
       </div>
-      <div className={`w-full rounded-full bg-gray-300  ` }>
-                <div className={`bg-[#8FB339] p-1 rounded-full w-[${progress}%]`}></div>
+      <div className={`w-full rounded-full bg-gray-300  `}>
+        <div className={`bg-[#8FB339] p-1 rounded-full w-[${progress}%]`}></div>
       </div>
     </div>
   );
 }
 
 
-
+//TODO: add dynamic handlers for forwardign ....
 // TODO: the data must be formatted in a better way before using recieving it
 // TODO: must set the fixed max and min width and height for the card
 // TODO: make it responsive

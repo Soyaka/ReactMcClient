@@ -1,7 +1,7 @@
 import React from 'react';
 import { FaBookmark } from "react-icons/fa"; // Import an additional icon for the unbookmarked state
 
-export default function Bookamrk({ isBookmarked: isBookmarked }: { isBookmarked: boolean }) {
+export default function Bookmark({ isBookmarked: isBookmarked }: { isBookmarked: boolean }) {
   const [open, setOpen] = React.useState(isBookmarked);
 
   const handleOpen = () => {

@@ -1,2 +1,2 @@
 run:
-	bun run dev 
+	bun run dev

@@ -15,7 +15,7 @@ type PathCardProps = {
   skillLevel: string;
 };
 
-export default function LearningPathCard({
+export default function CourseCard({
   title,
   description,
   author,
@@ -28,19 +28,20 @@ export default function LearningPathCard({
   skillLevel,
 }: PathCardProps) {
   isFree = false; 
+  progress= 40
   return (
-    <div className="path-card w-full h-full rounded-lg min-w-[25rem] text-zinc-600 m-1 bg-gray-100 hover:bg-gray-200 cursor-pointer overflow-hidden">
-      <div className="flex flex-col p-2">
-        <div className="path-card-content">
+    <div className="path-card w-full h-full rounded-lg min-w-[12rem] text-zinc-600 m-1 bg-gray-100 hover:bg-gray-200 cursor-pointer overflow-hidden">
+      <div className="flex flex-col p-2 ">
+        <div className="path-card-content flex flex-col gap-3">
           <div className=" path-card-header flex justify-between max-h-[27%]">
-            <div className="path-card-header-left flex flex-col gap-4">
+            <div className="path-card-header-left flex flex-col gap-8">
               <div className="path-card-category flex flex-row text-black text-xs leading-tight tracking-[0.2em] relative">
                 {!isFree && (
                   <span className="traingle-clip absolute -top-[0.5em] -left-[0.5em] bg-[#fbab2c]/90 font-serif  pl-2 pr-6 pt-1 pb-3 text-lg text-left text-black/80">
                     $
                   </span>
                 )}
-                <span className={`${!isFree && "ml-5"}`}>{category || "LEARNING PATH"}</span>
+                <span className={`${!isFree && "ml-5"}`}>{category || "COURSE"}</span>
               </div>
               <div className="path-card-author-image flex items-end">
                 <Instrum />
@@ -53,15 +54,15 @@ export default function LearningPathCard({
             </div>
           </div>
           <div className="path-card-body flex flex-col gap-3 pb-3">
-            <div className="path-card-title w-full p-1 text-sm text-black tracking-tighter">
-              {title || "Flask and SQLite: Consuming API Endpoints with Swagger"}
+            <div className="path-card-title w-full p-1  text-black tracking-tighter">
+              {title || "Flask and SQLite"}
             </div>
-            <p className="path-card-description w-full text-xs multiline-truncate">
+            {/* <p className="path-card-description w-full text-xs multiline-truncate">
               {description ||
                 "Configuration drift, the gradual deviation of a device configuration from its intended state, can lead to network issues and security vulnerabilities. This path will walk you through how to build a configuration manager leveraging Cisco DNA Center's SDK to capture regular snapshots of device configurations and comparing them to a baseline."}
-            </p>
+            </p> */}
           </div>
-          <div className="path-card-footer flex flex-col">
+          <div className="path-card-footer flex flex-col p-2">
             <div className="flex flex-row items-end justify-between">
               <div className="path-card-statistics flex flex-row items-center gap-1 px-2">
                 <div className="path-card-duration flex flex-col items-center gap-2">
@@ -77,7 +78,7 @@ export default function LearningPathCard({
                   </span>
                 </div>
               </div>
-              {!isFree ? (
+              {/* {!isFree ? (
                 <div className="path-card-price bg-sky-600 px-3 py-1 rounded-full text-white">
                   <button className="path-card-price-text text-[0.8em]">
                     Subscribe Now
@@ -89,7 +90,7 @@ export default function LearningPathCard({
                     $ Free
                   </span>
                 </div>
-              )}
+              )} */}
             </div>
           </div>
         </div>

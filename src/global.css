@@ -120,3 +120,9 @@
   -webkit-line-clamp: 3; /* Number of lines to display before truncating */
   overflow: hidden;
 }
+
+.traingle-clip{
+  clip-path: polygon(0 0, 0 100%, 100% 0);
+
+
+}
