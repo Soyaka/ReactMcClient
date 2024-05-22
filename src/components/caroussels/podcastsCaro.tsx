@@ -5,11 +5,11 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 
-const CourseCard = lazy(() => import('@/components/cards/CourseCard'));
+const PodcatsCard = lazy(() => import('@/components/cards/CourseCard'));
 
-const CourseCaroussel: React.FC = ( props : any) => {
+export default function PodcastCaro( props : any) {
   
-
+    const {data} = props
   return (
     <>
       <h1 className='text-3xl font-light text-black dark:text-gray-100'>Courses</h1>
@@ -21,7 +21,7 @@ const CourseCaroussel: React.FC = ( props : any) => {
         <CarouselContent className="-ml-1 w-full gap-4 p-3 mr-4">
           {courses?.map((course: any, index: number) =>
             <Suspense key={index} fallback={<SkeletonCard />}>
-            <CourseCard {...course}/>
+            <PodcatsCard {...course}/>
             </Suspense>
           )}
         </CarouselContent>
@@ -31,7 +31,7 @@ const CourseCaroussel: React.FC = ( props : any) => {
   );
 };
 
-export default CourseCaroussel;
+
 
 
 type CourseProps = {

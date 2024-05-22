@@ -12,7 +12,8 @@ import { lazy } from "react";
 
 
 
-export default function CarouselSpacingML() {
+export default function LearningPathCaro( paths : any) {
+
 
 
   const LearningPathCard = lazy(() => 

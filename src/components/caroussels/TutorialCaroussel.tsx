@@ -12,9 +12,9 @@ type props = {
 
 const TutorialCard = lazy(() => import('../cards/TutorialCard'));
 
-const TutorialCaroussel: React.FC = ( props : any) => {
+export default function TutorialCaroussel( tutorials : any) {
 
-  const {data} = props
+ 
 
   return (
     <>
@@ -36,4 +36,3 @@ const TutorialCaroussel: React.FC = ( props : any) => {
   );
 };
 
-export default TutorialCaroussel;

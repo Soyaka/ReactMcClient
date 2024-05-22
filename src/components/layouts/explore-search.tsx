@@ -12,7 +12,7 @@ import { BaseContainerProps } from "@elastic/react-search-ui-views";
 import { ResultViewProps } from "@elastic/react-search-ui-views";
 import { Layout } from "@elastic/react-search-ui-views";
 import "@elastic/react-search-ui-views/lib/styles/styles.css";
-
+import ExploreBodyView from "../views/explore-body-view";
 import {
   buildAutocompleteQueryConfig,
   buildFacetConfigFromConfig,
@@ -76,7 +76,7 @@ export  function Comp( result: any) {
 
 
 
-const ExploreSearch: React.FC = () => {
+export default function ExploreSearch() {
   const [wasSearched, setWasSearched] = useState(false);
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
 
@@ -114,6 +114,7 @@ const ExploreSearch: React.FC = () => {
                 thumbnailField={config.thumbnailField}
                 shouldTrackClickThrough={true}
 
+              view={ExploreBodyView}
               />
             }
           />
@@ -123,4 +124,4 @@ const ExploreSearch: React.FC = () => {
   );
 }
 
-export default ExploreSearch;
+

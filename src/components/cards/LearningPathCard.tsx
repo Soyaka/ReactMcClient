@@ -1,7 +1,7 @@
 import Bookmark from "@/components/extra/bookmark";
 import Instrum from "../extra/instrum";
 import { Duration, Level } from "@/components/extra/smallComps";
-
+import { useNavigate } from "react-router-dom";
 type PathCardProps = {
   id?: string;
   title: string;
@@ -28,12 +28,18 @@ export default function LearningPathCard({
   skillLevel,
 }: PathCardProps) {
 
+  const Navigate = useNavigate(); 
 
+  const handlePathCardClick = () => {
+    if (id) {
+      Navigate(`content/path/${id}`);
+    }
+  };
 
 
 
   return (
-    <div onClick={()=> handlePathCardClick(id || "")}
+    <div onClick={handlePathCardClick}
       className="path-card w-full h-full rounded-lg min-w-[25rem] max-w-[25rem] min-h-[16rem] max-h-[16rem] text-zinc-600 m-1 bg-gray-100 hover:bg-gray-200 cursor-pointer overflow-hidden flex flex-col">
       <div
         className="flex flex-col flex-grow p-2">
@@ -136,17 +142,6 @@ export default function LearningPathCard({
 
 
 
-const pathUrlBuilder = (path_id : string) =>{
-  return `content/path/${path_id}`
-}
-
-const NavigateToPath = (url : string) => {
-  window.location.href = pathUrlBuilder(url)
-}
-
-const handlePathCardClick = (id: string) => {
- id && NavigateToPath(pathUrlBuilder(id))
-}
 
 
 // TODO: make a dynamic handler on click :

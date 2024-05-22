@@ -7,8 +7,8 @@ import { v4 as uuidv4 } from 'uuid';
 
 const CourseCard = lazy(() => import('@/components/cards/CourseCard'));
 
-const CourseCaroussel: React.FC = ( props : any) => {
-  
+export default function CourseCaroussel( props : any) {
+
 
   return (
     <>
@@ -30,8 +30,6 @@ const CourseCaroussel: React.FC = ( props : any) => {
     </>
   );
 };
-
-export default CourseCaroussel;
 
 
 type CourseProps = {

@@ -25,16 +25,17 @@ export default function CourseCard({
 }: CourseProps) {
   const Navigate = useNavigate(); 
 
+
   const handleCourseCardClick = () => {
     if (id) {
-      Navigate(`/course/${id}`);
+      Navigate(`content/course/${id}`);
     }
   };
 
   return (
     <div
       onClick={handleCourseCardClick}
-      className="path-card w-full h-full rounded-lg min-w-[12rem] max-w-[12rem] min-h-[16rem] max-h-[16rem] text-zinc-600 m-1 bg-gray-100 hover:bg-gray-200 cursor-pointer overflow-hidden flex flex-col"
+      className="path-card relative w-full h-full rounded-lg min-w-[12rem] max-w-[12rem] min-h-[16rem] max-h-[16rem] text-zinc-600 m-1 bg-gray-100 hover:bg-gray-200 cursor-pointer overflow-hidden"
     >
       <div className="flex flex-col p-2 ">
         <div className="path-card-content flex flex-col gap-2 items-between justify-between">
@@ -52,8 +53,8 @@ export default function CourseCard({
                 <Instrum />
               </div>
             </div>
-            <div className="path-card-header-right">
-              <div className="path-card-bookmark">
+            <div className="path-card-header-right z-10">
+              <div className="path-card-bookmark absolute top-2 right-2">
                 <Bookmark isBookmarked={isBookmarked} />
               </div>
             </div>
