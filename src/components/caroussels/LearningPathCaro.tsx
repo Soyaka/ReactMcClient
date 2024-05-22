@@ -8,8 +8,8 @@ import {
   CarouselContent,
 } from "@/components/ui/carousel";
 
-import React ,{ lazy } from "react";
-import { title } from 'process';
+import { lazy } from "react";
+
 
 
 export default function CarouselSpacingML() {
@@ -20,11 +20,13 @@ export default function CarouselSpacingML() {
 
 
   return (
+    <>  
+    <h1 className='text-3xl font-light text-black dark:text-gray-100'>Learning Paths</h1>
     <Carousel opts={{
         align: "start",
         loop: true,
       }} className="w-full max-h-[40vh] ">
-      <CarouselContent className="-ml-1 w-full gap-6 p-3 mr-4">
+      <CarouselContent className="-ml-1 w-full gap-6  mr-4">
         {items.map((item : any, index) =>
           <Suspense key={index} fallback={<SkeletonCard />}>
             <LearningPathCard key={index}  {...item} />
@@ -32,8 +34,26 @@ export default function CarouselSpacingML() {
         )}
       </CarouselContent>
     </Carousel>
+    </>
   );
 }
+
+
+
+type PathCardProps = {
+  id?: string;
+  title: string;
+  description: string;
+  author: string;
+  category: string;
+  duration: string;
+  date: string;
+  progress: number;
+  isFree: boolean;
+  isBookmarked: boolean;
+  skillLevel: string;
+};
+
 
 
 const items: PathCardProps[] = [
@@ -128,7 +148,7 @@ const items: PathCardProps[] = [
         category: "LEARNING PATH",
         duration: "6 weeks",
         date: "October 2022",
-        progress: 70,
+        progress: 0,
         isFree: false,
         isBookmarked: true,
         skillLevel: "Advanced",
@@ -142,7 +162,7 @@ const items: PathCardProps[] = [
         category: "LEARNING PATH",
         duration: "4 weeks",
         date: "November 2022",
-        progress: 45,
+        progress: 0,
         isFree: false,
         isBookmarked: false,
         skillLevel: "Intermediate",
@@ -177,19 +197,3 @@ const items: PathCardProps[] = [
     }
 ];
 
-
-
-type PathCardProps = {
-    id?: string;
-    title: string;
-    description: string;
-    author: string;
-    category: string;
-    duration: string;
-    date: string;
-    progress: number;
-    isFree: boolean;
-    isBookmarked: boolean;
-    skillLevel: string;
-  };
-  

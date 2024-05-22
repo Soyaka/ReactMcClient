@@ -120,9 +120,24 @@
   -webkit-line-clamp: 2;
   overflow: hidden;
 }
+.title-truncate {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
 
 .triangle-clip{
   clip-path: polygon(0 0, 0 100%, 100% 0);
+}
 
 
+
+.host {
+  --background: var(--color-orange);
+  --sticker-text-color: var(--color-black);
+  --profile-text: var(--color-gray-80);
+  --sticker-diameter: 5.125rem;
+  --sticker-font-size: var(--font-size-small);
+  --sticker-padding: 0.875rem;
 }

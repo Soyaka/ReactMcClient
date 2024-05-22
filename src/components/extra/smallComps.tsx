@@ -7,7 +7,7 @@
 
 function Duration() {
   return (
-    <div className="flex flex-row gap-1 p-2 bg-white  items-center text-black">
+    <div className="flex flex-row gap-1 p-2 bg-white  rounded-md items-center text-black">
       <GiDuration size={25}  />
     </div>
   );
@@ -15,7 +15,7 @@ function Duration() {
 
 function Level() {
   return (
-    <div className="flex flex-row gap-1 p-2 bg-white  items-center text-black">
+    <div className="flex flex-row gap-1 p-2 bg-white rounded-md  items-center text-black">
       <SiLevelsdotfyi size={25}  />
     </div>
   );

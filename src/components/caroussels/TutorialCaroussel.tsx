@@ -31,15 +31,6 @@ const TutorialCaroussel: React.FC = ( props : any) => {
             </Suspense>
           )}
         </CarouselContent>
-
-        {/* <CarouselContent className="-ml-1 w-full gap-6"> //TODO: make this dynamic
-          {data?.map((item: any, index: number) =>
-            <Suspense key={index} fallback={<SkeletonCard />}>
-              <TutorialCard {...item}/>
-            </Suspense>
-          )}
-        </CarouselContent> */}
-
       </Carousel>
     </>
   );
