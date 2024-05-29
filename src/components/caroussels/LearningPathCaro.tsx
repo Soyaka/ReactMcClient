@@ -21,7 +21,7 @@ export default function LearningPathCaro( paths : any) {
 
 
   return (
-    <>  
+    < div className='flex flex-col gap-2 py-3 '>  
     <h1 className='text-3xl font-light text-black dark:text-gray-100'>Learning Paths</h1>
     <Carousel opts={{
         align: "start",
@@ -35,7 +35,7 @@ export default function LearningPathCaro( paths : any) {
         )}
       </CarouselContent>
     </Carousel>
-    </>
+    </div>
   );
 }
 

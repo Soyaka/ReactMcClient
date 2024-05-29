@@ -12,7 +12,7 @@ export default function PodcastCaro( props : any) {
     const {data} = props
   return (
     <>
-      <h1 className='text-3xl font-light text-black dark:text-gray-100'>Courses</h1>
+      <h1 className='text-3xl font-light text-black dark:text-gray-100'>Podcats</h1>
       <Carousel opts={{
           align: "start",
           loop: true,

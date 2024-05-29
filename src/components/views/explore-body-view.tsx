@@ -8,7 +8,7 @@ import  PodcastsCaro from '../caroussels/podcastsCaro'
 export default function ExploreBodyView( props : any) {
     const {courses , tutorials, learningPaths, podcasts} = props
   return (
-    <div>
+    <div className='flex flex-col gap-6   '>
       <CourseCaroussel courses ={courses} />
       <TutorialCaroussel tutorials={tutorials} />
       <LearningPathCaro learningPaths={learningPaths} />
