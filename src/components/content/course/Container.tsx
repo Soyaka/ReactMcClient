@@ -7,7 +7,7 @@ export default function CoursePageContainer() {
   const course = Data.find((course) => course.content_info.id === courseId);
 
   return (
-    <div className="relative flex flex-col min-h-screen bg-cover bg-center text-white"
+    <div className="relative flex flex-col bg-cover bg-center text-white"
 
     >
       

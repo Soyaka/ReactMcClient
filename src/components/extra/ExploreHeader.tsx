@@ -12,7 +12,7 @@ export default function ExploreHeader() {
                 <h3 className='text-3xl font-light'>Micro L. has a variety of content to meet your learning needs.</h3>
             </div>
             <div>
-                <ul className='flex flex-row relative gap-8 2xl:gap-14 2xl:justify-start 2xl:left-[12em] w-full px-4 py-12 text-black dark:text-white justify-center items-center'>
+                <ul className='flex flex-row relative gap-8 2xl:gap-14 2xl:justify-center  w-full px-4 py-12 text-black dark:text-white justify-center items-center'>
                     {ContentTypes.map((item) => (
                         <li key={item.Tag}>
                             <Link to={item.href} className={`text-2xl font-light ${pathname === item.href ? 'border-b-2 border-black' : 'border-b-2 border-white'}`}>

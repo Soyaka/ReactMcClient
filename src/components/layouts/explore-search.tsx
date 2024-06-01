@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import AppSearchAPIConnector from "@elastic/search-ui-app-search-connector";
+import { InputViewProps } from "@elastic/react-search-ui-views";
+
 import {
   ErrorBoundary,
   Facet,
@@ -7,9 +9,8 @@ import {
   SearchBox,
   Results,
 } from "@elastic/react-search-ui";
-import type { SearchContextState, SearchResult } from "@elastic/search-ui";
-import { BaseContainerProps } from "@elastic/react-search-ui-views";
-import { ResultViewProps } from "@elastic/react-search-ui-views";
+import type { SearchResult } from "@elastic/search-ui";
+
 import { Layout } from "@elastic/react-search-ui-views";
 import "@elastic/react-search-ui-views/lib/styles/styles.css";
 import ExploreBodyView from "../views/explore-body-view";
@@ -54,27 +55,6 @@ const searchProviderConfig = {
   apiConnector: connector,
   alwaysSearchOnInitialLoad: true
 };
-const makeResult =(results:any)=>{
-  const norms =[]
-  for (let i = 0; i < results.length; i++) {
-    norms.push(results[i].props.result)
-  }
-  return norms
-}
-
-
-export  function Comp( result: any) {
-
-  const itemms =  makeResult(result.children)
-  console.log(itemms)
-
- return (
-   <div>
-   </div>
- )
-} 
-
-
 
 export default function ExploreSearch() {
   const [wasSearched, setWasSearched] = useState(false);
@@ -91,6 +71,7 @@ export default function ExploreSearch() {
         <ErrorBoundary>
           <Layout
             header={<SearchBox
+              inputView={CustomSearchBoxInput}
               autocompleteSuggestions={true}
               searchAsYouType
               shouldClearFilters={true}
@@ -125,4 +106,24 @@ export default function ExploreSearch() {
   );
 }
 
+interface CustomSearchBoxInputProps extends InputViewProps {
+  getAutocomplete: () => JSX.Element;
+}
 
+const CustomSearchBoxInput: React.FC<CustomSearchBoxInputProps> = ({
+  getInputProps,
+  getAutocomplete,
+}) => {
+  return (
+    <div className="flex p-2  items-start justify-start w-full">
+      <input
+        {...getInputProps({
+          "data-transaction-name": "search input",
+          placeholder: "Search"
+        })}
+        className="p-3 border rounded-full w-[25%] border-blue-400 "
+      />
+      {getAutocomplete && getAutocomplete()}
+    </div>
+  );
+};
