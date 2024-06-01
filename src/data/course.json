@@ -1,0 +1,237 @@
+[
+    {
+        "content_info": {
+          "id": "course1",
+          "title": "Introduction to Programming",
+          "description": "A beginner's course on programming concepts and basics.",
+          "content_type": "course",
+          "image_url": "https://i.pinimg.com/564x/e3/88/44/e38844ef720e15f03af4cb1c05a7505f.jpg",
+          "technology": "Python",
+          "publisher": "Tech University",
+          "skill_level": "Beginner",
+          "author": "John Doe",
+          "created_at": "2023-01-01T00:00:00Z",
+          "updated_at": "2023-06-01T00:00:00Z",
+          "deleted_at": null,
+          "is_private": false,
+          "is_paid": true,
+          "is_free": false,
+          "is_trial": true,
+          "is_locked": false,
+          "is_available": true,
+          "language": "English",
+          "keywords": ["programming", "python", "beginner"],
+          "tags": ["coding", "python", "basics"],
+          "views": 1234,
+          "price": 49.99
+        },
+        "duration": "10 hours",
+        "nb_pages": 10,
+        "pages_ids": ["page1", "page2", "page3"],
+        "pages": [
+          {
+            "id": "page1",
+            "title": "Getting Started",
+            "sections": [
+              {
+                "title": "Introduction",
+                "description": "An overview of what you will learn in this course.",
+                "resources": [
+                  {
+                    "id": "resource1",
+                    "name": "Introductory Video",
+                    "description": "A short video introducing the course.",
+                    "url": "https://example.com/videos/intro.mp4"
+                  }
+                ],
+                "paragraph": "Welcome to the Introduction to Programming course. This section will provide an overview of what you will learn."
+              }
+            ],
+            "question": {
+              "content": "What is programming?",
+              "options": [
+                "A method of baking bread",
+                "A way to make computers perform tasks",
+                "A type of dance",
+                "None of the above"
+              ],
+              "answer": "A way to make computers perform tasks"
+            }
+          },
+          {
+            "id": "page2",
+            "title": "Basic Syntax",
+            "sections": [
+              {
+                "title": "Python Syntax",
+                "description": "Learn the basic syntax of Python programming.",
+                "resources": [
+                  {
+                    "id": "resource2",
+                    "name": "Python Syntax Guide",
+                    "description": "A guide to basic Python syntax.",
+                    "url": "https://example.com/guides/python-syntax.pdf"
+                  }
+                ],
+                "paragraph": "In this section, you will learn the basic syntax of the Python programming language, including variables, data types, and simple operations."
+              }
+            ],
+            "question": {
+              "content": "Which of the following is a valid Python variable name?",
+              "options": [
+                "1variable",
+                "variable_name",
+                "variable-name",
+                "None of the above"
+              ],
+              "answer": "variable_name"
+            }
+          }
+        ]
+      }
+      ,
+
+
+
+
+      {
+        "content_info": {
+          "id": "course1",
+          "title": "Introduction to Programming",
+          "description": "A beginner's course on programming concepts and basics.",
+          "content_type": "course",
+          "image_url": "https://example.com/images/course1.jpg",
+          "technology": "Python",
+          "publisher": "Tech University",
+          "skill_level": "Beginner",
+          "author": "John Doe",
+          "created_at": "2023-01-01T00:00:00Z",
+          "updated_at": "2023-06-01T00:00:00Z",
+          "deleted_at": null,
+          "is_private": false,
+          "is_paid": true,
+          "is_free": false,
+          "is_trial": true,
+          "is_locked": false,
+          "is_available": true,
+          "language": "English",
+          "keywords": ["programming", "python", "beginner"],
+          "tags": ["coding", "python", "basics"],
+          "views": 1234,
+          "price": 49.99
+        },
+        "duration": "10 hours",
+        "nb_pages": 3,
+        "pages_ids": ["page1", "page2", "page3"],
+        "pages": [
+          {
+            "id": "page1",
+            "title": "Getting Started",
+            "sections": [
+              {
+                "title": "Introduction",
+                "description": "An overview of what you will learn in this course.",
+                "resources": [
+                  {
+                    "id": "resource1",
+                    "name": "Introductory Video",
+                    "description": "A short video introducing the course.",
+                    "url": "https://example.com/videos/intro.mp4"
+                  }
+                ],
+                "paragraph": "Welcome to the Introduction to Programming course. This section will provide an overview of what you will learn."
+              }
+            ],
+            "question": {
+              "content": "What is programming?",
+              "options": [
+                "A method of baking bread",
+                "A way to make computers perform tasks",
+                "A type of dance",
+                "None of the above"
+              ],
+              "answer": "A way to make computers perform tasks"
+            }
+          },
+          {
+            "id": "page2",
+            "title": "Basic Syntax",
+            "sections": [
+              {
+                "title": "Python Syntax",
+                "description": "Learn the basic syntax of Python programming.",
+                "resources": [
+                  {
+                    "id": "resource2",
+                    "name": "Python Syntax Guide",
+                    "description": "A guide to basic Python syntax.",
+                    "url": "https://example.com/guides/python-syntax.pdf"
+                  }
+                ],
+                "paragraph": "In this section, you will learn the basic syntax of the Python programming language, including variables, data types, and simple operations."
+              }
+            ],
+            "question": {
+              "content": "Which of the following is a valid Python variable name?",
+              "options": [
+                "1variable",
+                "variable_name",
+                "variable-name",
+                "None of the above"
+              ],
+              "answer": "variable_name"
+            }
+          },
+          {
+            "id": "page3",
+            "title": "Control Structures",
+            "sections": [
+              {
+                "title": "If Statements",
+                "description": "Learn how to use if statements in Python.",
+                "resources": [
+                  {
+                    "id": "resource3",
+                    "name": "If Statements Tutorial",
+                    "description": "A tutorial on using if statements in Python.",
+                    "url": "https://example.com/tutorials/if-statements.html"
+                  },
+                  {
+                    "id": "resource4",
+                    "name": "If Statements Video",
+                    "description": "A video explaining if statements in Python.",
+                    "url": "https://example.com/videos/if-statements.mp4"
+                  }
+                ],
+                "paragraph": "This section will teach you how to use if statements to make decisions in your Python programs."
+              },
+              {
+                "title": "Loops",
+                "description": "Learn how to use loops to iterate over sequences.",
+                "resources": [
+                  {
+                    "id": "resource5",
+                    "name": "Loops Guide",
+                    "description": "A guide on using loops in Python.",
+                    "url": "https://example.com/guides/loops.pdf"
+                  }
+                ],
+                "paragraph": "In this section, you'll learn about the different types of loops in Python, including for and while loops, and how to use them effectively."
+              }
+            ],
+            "question": {
+              "content": "What is the output of the following code?\n```python\nfor i in range(3):\n    print(i)\n```",
+              "options": [
+                "0 1 2",
+                "1 2 3",
+                "0 1 2 3",
+                "None of the above"
+              ],
+              "answer": "0 1 2"
+            }
+          }
+        ]
+      }
+      
+    
+]

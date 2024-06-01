@@ -28,7 +28,7 @@ export default function CourseCard({
 
   const handleCourseCardClick = () => {
     if (id) {
-      Navigate(`content/course/${id}`);
+      Navigate(`/content/course/${id}`);
     }
   };
 

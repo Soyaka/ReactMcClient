@@ -96,18 +96,19 @@ export default function ExploreSearch() {
               shouldClearFilters={true}
             />}
             sideContent={
-              <div className="w-full" >
+              <div className="" >
                 {getFacetFields().map(field => (
                   <Facet
                     key={field}
                     field={field}
                     label={field}
-                    className="mb-4 w-full text-blue-400 "
+
                   />
                 ))}
               </div>
             }
             bodyContent={
+
               <Results
                 titleField={config.titleField}
                 urlField={config.urlField}
