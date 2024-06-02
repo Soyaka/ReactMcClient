@@ -96,7 +96,7 @@
 
       {
         "content_info": {
-          "id": "course1",
+          "id": "course2",
           "title": "Introduction to Programming",
           "description": "A beginner's course on programming concepts and basics.",
           "content_type": "course",
@@ -231,7 +231,98 @@
             }
           }
         ]
-      }
+      },
+      {
+        "content_info": {
+            "id": "course3",
+            "title": "Advanced Web Development",
+            "description": "An advanced course on modern web development techniques and frameworks.",
+            "content_type": "course",
+            "image_url": "https://i.pinimg.com/564x/a1/b2/3c/a1b23c4a6f4a7a5d8c9e8b6e4e5f2e1f.jpg",
+            "technology": "JavaScript",
+            "publisher": "Web Academy",
+            "skill_level": "Advanced",
+            "author": "Jane Smith",
+            "created_at": "2022-05-15T00:00:00Z",
+            "updated_at": "2023-04-20T00:00:00Z",
+            "deleted_at": null,
+            "is_private": false,
+            "is_paid": true,
+            "is_free": false,
+            "is_trial": false,
+            "is_locked": false,
+            "is_available": true,
+            "language": "English",
+            "keywords": ["web development", "javascript", "advanced"],
+            "tags": ["web", "javascript", "frameworks"],
+            "views": 4321,
+            "price": 99.99
+        },
+        "duration": "20 hours",
+        "nb_pages": 15,
+        "pages_ids": ["page1", "page2", "page3"],
+        "pages": [
+            {
+                "id": "page1",
+                "title": "Setting Up",
+                "sections": [
+                    {
+                        "title": "Environment Setup",
+                        "description": "Instructions for setting up the development environment.",
+                        "resources": [
+                            {
+                                "id": "resource1",
+                                "name": "Setup Guide",
+                                "description": "A comprehensive guide for setting up the web development environment.",
+                                "url": "https://example.com/guides/setup.pdf"
+                            }
+                        ],
+                        "paragraph": "This section will guide you through the process of setting up your development environment, including installing necessary tools and software."
+                    }
+                ],
+                "question": {
+                    "content": "Which tool is used for version control?",
+                    "options": [
+                        "Git",
+                        "Photoshop",
+                        "Microsoft Word",
+                        "None of the above"
+                    ],
+                    "answer": "Git"
+                }
+            },
+            {
+                "id": "page2",
+                "title": "JavaScript Frameworks",
+                "sections": [
+                    {
+                        "title": "Introduction to Frameworks",
+                        "description": "Learn about the most popular JavaScript frameworks.",
+                        "resources": [
+                            {
+                                "id": "resource2",
+                                "name": "Framework Comparison",
+                                "description": "A comparison of popular JavaScript frameworks.",
+                                "url": "https://example.com/guides/framework-comparison.pdf"
+                            }
+                        ],
+                        "paragraph": "In this section, you will be introduced to the most popular JavaScript frameworks, including React, Angular, and Vue.js, and learn their key features and differences."
+                    }
+                ],
+                "question": {
+                    "content": "Which of the following is a JavaScript framework?",
+                    "options": [
+                        "React",
+                        "Python",
+                        "Django",
+                        "None of the above"
+                    ],
+                    "answer": "React"
+                }
+            }
+        ]
+    }
+    
       
     
 ]
