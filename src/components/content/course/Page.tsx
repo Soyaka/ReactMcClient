@@ -1,10 +1,15 @@
-import Data from '@/data/course.json'
+import Data from "@/data/course.json";
 import { useParams } from "react-router-dom";
 import { Skeleton } from "@/components/ui/skeleton";
+import { useNavigate } from "react-router-dom";
+import ScrollAreaContent from "./ScrolledContent";
+import CourseSidebar from "./SideBar";
 
-export default function CoursePage( ) {
+export default function CoursePage() {
   const { courseId, pageId } = useParams();
   console.log(useParams());
+  const navigate = useNavigate();
+
 
   const course = Data.find((course) => course.content_info.id === courseId);
 
@@ -23,24 +28,10 @@ export default function CoursePage( ) {
     );
   }
 
-
-
   return (
-    <div className=" flex flex-col items-center justify-center gap-12 text-white">
-
-      <h1 className='text-4xl p-4  '>{page.title}</h1>
-      <div className='flex flex-col gap-4'>
-      {
-        page.sections.map((section, index) => (
-          <div key={index} className='flex flex-col gap-3 p-3 '>
-            <h2 className='text-2xl'>{section.title}</h2>
-            <p className='text-sm'>{section.description}</p>
-            <p className='text-xs'>{section.paragraph}</p>
-          </div>
-        ))
-      }
-      </div>
-
+    <div className="fixed flex  flex-row justify-center gap-6   w-screen text-white px-12 ">
+      <ScrollAreaContent />
+      <CourseSidebar course={course} />
     </div>
-  )
+  );
 }
