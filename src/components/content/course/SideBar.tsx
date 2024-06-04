@@ -1,5 +1,5 @@
 import { useParams, useNavigate } from "react-router-dom";
-import { Page, Course } from "@/types/index"; // Adjust import path as necessary
+import { Page, Course } from "@/types/index"; 
 
 interface CourseSidebarProps {
   course: Course;
