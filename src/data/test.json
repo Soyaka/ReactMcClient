@@ -1,0 +1,251 @@
+[
+    {
+        "content_info": {
+            "id": "course4",
+            "title": "Advanced Web Development",
+            "description": "An advanced course on modern web development techniques and frameworks.",
+            "content_type": "course",
+            "image_url": "https://i.pinimg.com/564x/a1/b2/3c/a1b23c4a6f4a7a5d8c9e8b6e4e5f2e1f.jpg",
+            "technology": "JavaScript",
+            "publisher": "Web Academy",
+            "skill_level": "Advanced",
+            "author": "Jane Smith",
+            "created_at": "2022-05-15T00:00:00Z",
+            "updated_at": "2023-04-20T00:00:00Z",
+            "deleted_at": null,
+            "is_private": false,
+            "is_paid": true,
+            "is_free": false,
+            "is_trial": false,
+            "is_locked": false,
+            "is_available": true,
+            "language": "English",
+            "keywords": ["web development", "javascript", "advanced"],
+            "tags": ["web", "javascript", "frameworks"],
+            "views": 4321,
+            "price": 99.99
+        },
+        "duration": "20 hours",
+        "nb_pages": 15,
+        "pages_ids": [
+            "page1", "page2", "page3", "page4", "page5"
+        ],
+        "pages": [
+            {
+                "id": "page1",
+                "title": "Setting Up",
+                "sections": [
+                    {
+                        "title": "Environment Setup",
+                        "description": "Instructions for setting up the development environment.",
+                        "resources": [
+                            {
+                                "id": "resource1",
+                                "name": "Setup Guide",
+                                "description": "A comprehensive guide for setting up the web development environment.",
+                                "url": "https://example.com/guides/setup.pdf"
+                            }
+                        ],
+                        "paragraph": "This section will guide you through the process of setting up your development environment, including installing necessary tools and software."
+                    }
+                ],
+                "question": {
+                    "content": "Which tool is used for version control?",
+                    "options": [
+                        "Git",
+                        "Photoshop",
+                        "Microsoft Word",
+                        "None of the above"
+                    ],
+                    "answer": "Git"
+                }
+            },
+            {
+                "id": "page2",
+                "title": "JavaScript Frameworks",
+                "sections": [
+                    {
+                        "title": "Introduction to Frameworks",
+                        "description": "Learn about the most popular JavaScript frameworks.",
+                        "resources": [
+                            {
+                                "id": "resource2",
+                                "type": "video",
+                                "name": "Framework Comparison",
+                                "description": "A comparison of popular JavaScript frameworks.",
+                                "url": "https://www.youtube.com/watch?v=-CYvKScPlk0&list=RDUMCT-kveba4&index=4"
+                            }
+                        ],
+                        "paragraph": "In this section, you will be introduced to the most popular JavaScript frameworks, including React, Angular, and Vue.js, and learn their key features and differences."
+                    },
+                    {
+                      "title": "Introduction to Frameworks",
+                      "description": "Learn about the most popular JavaScript frameworks.",
+                      "resources": [
+                          {
+                              "id": "resource2",
+                              "type": "video",
+                              "name": "Framework Comparison",
+                              "description": "A comparison of popular JavaScript frameworks.",
+                              "url": "https://www.youtube.com/watch?v=-CYvKScPlk0&list=RDUMCT-kveba4&index=4"
+                          }
+                      ],
+                      "paragraph": "In this section, you will be introduced to the most popular JavaScript frameworks, including React, Angular, and Vue.js, and learn their key features and differences."
+                  },
+                  {
+                    "title": "Introduction to Frameworks",
+                    "description": "Learn about the most popular JavaScript frameworks.",
+                    "resources": [
+                        {
+                            "id": "resource2",
+                            "type": "video",
+                            "name": "Framework Comparison",
+                            "description": "A comparison of popular JavaScript frameworks.",
+                            "url": "https://www.youtube.com/watch?v=-CYvKScPlk0&list=RDUMCT-kveba4&index=4"
+                        }
+                    ],
+                    "paragraph": "In this section, you will be introduced to the most popular JavaScript frameworks, including React, Angular, and Vue.js, and learn their key features and differences."
+                }
+                ],
+                "question": {
+                    "content": "Which of the following is a JavaScript framework?",
+                    "options": [
+                        "React",
+                        "Python",
+                        "Django",
+                        "None of the above"
+                    ],
+                    "answer": "React"
+                }
+            },
+            {
+                "id": "page3",
+                "title": "Advanced React",
+                "sections": [
+                    {
+                        "title": "React Hooks",
+                        "description": "Understanding and using React Hooks.",
+                        "resources": [
+                            {
+                                "id": "resource3",
+                                "name": "React Hooks Guide",
+                                "type": "code",
+                                "description": "An in-depth guide to using React Hooks.",
+                                "url": "import { useState } from 'react';"
+                            }
+                        ],
+                        "paragraph": "This section covers the basics and advanced usage of React Hooks, including useState, useEffect, and custom hooks."
+                    },
+                    {
+                        "title": "State Management",
+                        "description": "Managing state in large React applications.",
+                        "resources": [
+                            {
+                                "id": "resource4",
+                                "name": "State Management in React",
+                                "description": "Techniques and libraries for managing state in React.",
+                                "url": "https://redux.js.org/introduction/getting-started"
+                            }
+                        ],
+                        "paragraph": "Learn about different state management solutions in React, including Context API, Redux, and MobX."
+                    }
+                ],
+                "question": {
+                    "content": "Which hook is used to manage state in a functional component?",
+                    "options": [
+                        "useState",
+                        "useEffect",
+                        "useContext",
+                        "useReducer"
+                    ],
+                    "answer": "useState"
+                }
+            },
+            {
+                "id": "page4",
+                "title": "Backend Integration",
+                "sections": [
+                    {
+                        "title": "RESTful APIs",
+                        "description": "Integrating with RESTful APIs.",
+                        "resources": [
+                            {
+                                "id": "resource5",
+                                "name": "RESTful API Integration",
+                                "description": "A guide on integrating React applications with RESTful APIs.",
+                                "url": "https://example.com/guides/restful-api-integration.pdf"
+                            }
+                        ],
+                        "paragraph": "This section explains how to fetch data from RESTful APIs using tools like Axios and Fetch API, and how to handle asynchronous operations in React."
+                    },
+                    {
+                        "title": "GraphQL",
+                        "description": "Using GraphQL with React.",
+                        "resources": [
+                            {
+                                "id": "resource6",
+                                "name": "GraphQL Introduction",
+                                "description": "An introduction to using GraphQL in React applications.",
+                                "url": "https://graphql.org/learn/"
+                            }
+                        ],
+                        "paragraph": "Learn how to integrate GraphQL with React using Apollo Client, and understand the benefits of using GraphQL over REST."
+                    }
+                ],
+                "question": {
+                    "content": "Which library is commonly used for data fetching in React?",
+                    "options": [
+                        "jQuery",
+                        "Axios",
+                        "Lodash",
+                        "Moment.js"
+                    ],
+                    "answer": "Axios"
+                }
+            },
+            {
+                "id": "page5",
+                "title": "Performance Optimization",
+                "sections": [
+                    {
+                        "title": "Code Splitting",
+                        "description": "Optimizing load time with code splitting.",
+                        "resources": [
+                            {
+                                "id": "resource7",
+                                "name": "Code Splitting Guide",
+                                "description": "A guide to implementing code splitting in React.",
+                                "url": "https://reactjs.org/docs/code-splitting.html"
+                            }
+                        ],
+                        "paragraph": "This section discusses how to use code splitting to reduce the initial load time of your React application, utilizing tools like React.lazy and Suspense."
+                    },
+                    {
+                        "title": "Memoization",
+                        "description": "Improving performance with memoization.",
+                        "resources": [
+                            {
+                                "id": "resource8",
+                                "name": "Memoization Techniques",
+                                "description": "Techniques for memoizing React components and functions.",
+                                "url": "https://reactjs.org/docs/react-api.html#reactmemo"
+                            }
+                        ],
+                        "paragraph": "Learn how to use memoization techniques, such as React.memo and useMemo, to optimize the performance of your React applications."
+                    }
+                ],
+                "question": {
+                    "content": "Which React feature helps in reducing the initial load time?",
+                    "options": [
+                        "React.memo",
+                        "Code splitting",
+                        "useEffect",
+                        "useContext"
+                    ],
+                    "answer": "Code splitting"
+                }
+            }
+        ]
+    }
+    
+]

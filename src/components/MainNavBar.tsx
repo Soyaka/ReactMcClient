@@ -15,8 +15,8 @@ export default function NavBar() {
     return (
         <div className={`flex py-8  z-10  pl-[5em] sticky top-0 justify-stretch items-center 2xl:justify-end text-white bg-[#050505]`}>
             <div className={` w-[95%] grid grid-cols-1 md:grid-cols-10 2xl:grid-cols-10  items-center`}>
-                <div className={`flex md:col-span-1 justify-start 2xl:col-span-1 text-3xl  py-4`}>
-                    Cisco <span className={`flex justify-center items-center font-bold text-3xl  `}>U.</span>
+                <div className={`flex md:col-span-1 justify-start 2xl:col-span-1 text-3xl tracking-wider  py-4`}>
+                    Micro <span className={`flex justify-center items-center font-bold text-3xl  `}>L.</span>
                 </div>
                 <div className={`col-span-1 md:col-span-5 2xl:col-span-5  py-6 `}>
                     <ul className='flex flex-wrap  justify-start 2xl:justify-start items-center space-x-4 md:space-x-8 px-3 gap-2'>

@@ -15,15 +15,11 @@ export default function CourseSidebar({ course }: CourseSidebarProps) {
 
   const getPageIndex = () => {
     const page = course?.pages.find((page: Page) => page.id === pageId);
-    return course?.pages.indexOf(page?page:course?.pages[0]) + 1;
+    return course?.pages.indexOf(page || course.pages[0]) + 1;
   };
 
   const isLastPage = () => {
     return getPageIndex() === course?.pages.length;
-  };
-
-  const lastVisitedPage = (index: number) => {
-    return course?.pages[index];
   };
 
   const isVisited = (pageIndex: number) => {

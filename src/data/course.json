@@ -456,7 +456,7 @@
                               "name": "React Hooks Guide",
                               "type": "code",
                               "description": "An in-depth guide to using React Hooks.",
-                              "url": "https://reactjs.org/docs/hooks-intro.html"
+                              "url": "import { useState } from 'react';"
                           }
                       ],
                       "paragraph": "This section covers the basics and advanced usage of React Hooks, including useState, useEffect, and custom hooks."

@@ -31,7 +31,7 @@ export type Course = {
   duration: string;
 };
 
-type Resource = {
+export type Resource = {
     id: string;
     type?: string;
     name: string;
